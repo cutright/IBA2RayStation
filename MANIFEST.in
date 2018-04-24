@@ -1,0 +1,4 @@
+include src/*.py
+README.md
+LICENSE
+setup.py
