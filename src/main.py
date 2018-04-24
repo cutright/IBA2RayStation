@@ -29,7 +29,7 @@ def main():
     if len(sys.argv) == 3:
         output_file = sys.argv[2]
     else:
-        output_file = "rs_%s.csv" % str(datetime.now()).strip(':').strip('.')
+        output_file = "RayStation_Beam_Data_%s.csv" % str(datetime.now()).replace(':', '-').split('.')[0]
 
     iba2rs(file_path, output_file)
 
