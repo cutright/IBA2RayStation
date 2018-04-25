@@ -14,5 +14,5 @@ $ iba2rs <input_file_path> <optional-output-filename>
 ~~~~
 
 
-### To do:
+### To do
 This script does not currently support wedges or cones
