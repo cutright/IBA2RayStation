@@ -46,12 +46,16 @@ class IBA_Data:
             data_end = indices['data_end'][i]
 
             data = {'x': [], 'y': [], 'z': [], 'value': []}
+            if float(text[data_start].split('; ')[5]) == 0.:
+                value_index = 3
+            else:
+                value_index = 5
             for k in range(data_start, data_end+1):
                 row_data = text[k].split('; ')
                 data['x'].append(row_data[1])
                 data['y'].append(row_data[0])
                 data['z'].append(row_data[2])
-                data['value'].append(row_data[5])
+                data['value'].append(row_data[value_index])
 
             data = sort_data(data, self.scan_type[i])
             self.data.append(data)
