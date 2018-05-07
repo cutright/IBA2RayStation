@@ -32,9 +32,9 @@ def iba_to_raystation(iba_file_path, raystation_file_path='rs.csv'):
         field_size = iba_data.field_size[i].replace(units, '').strip()
         field_sizes = field_size.split(' x ')
         x = float(field_sizes[0])
-        hx = int(x/2)
+        hx = x/2.
         y = float(field_sizes[1])
-        hy = int(y/2)
+        hy = y/2.
         text.append('Fieldsize[%s]:; %s; %s; %s; %s;' % (units, -hx, -hy, hx, hy))
 
         curve_type = iba_data.scan_type[i].replace('Beam', 'Depth')
