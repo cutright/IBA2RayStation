@@ -8,7 +8,7 @@ setup(
     name='iba2raystation',
     include_package_data=True,
     packages=find_packages(),
-    version='0.1.2',
+    version='0.1.4',
     description='Converts an IBA OmniPro Accept CSV into a RaySearch RayStation CSV',
     author='Dan Cutright',
     author_email='dan.cutright@gmail.com',
@@ -20,7 +20,7 @@ setup(
     install_requires=requires,
     entry_points={
         'console_scripts': [
-            'iba2rs=src.main:main',
+            'iba2rs=iba2rs.main:main',
         ],
     },
     long_description="""IBA2RayStation
